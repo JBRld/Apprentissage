@@ -1,0 +1,148 @@
+*Ordonnancement*
+*Cours*
+
+Différencier programmes tributaires :
+
+  * de l'unité centrale = passe la majorité de son temps à s'exécuter
+  * des IO = passe la majorité de son temps à attendre (le retour d'un IO)
+
+
+Différencier les ordonnancement :
+
+  * avec réquisition = fait d'interrompre un processus encours
+    d'exécution pour donner de la ressource à un autre processus =
+    (système préemptif, gère le temps alloué à chaque application. Un
+    commutateur de tâche intervient pour répartir l'allocation des
+    ressources. Des degrés de priorités sont accordés à chaque
+    application. Chaque application peut être interrompue sans
+    interférer avec les autres)
+  * sans réquisition = fait d'attendre la fin d'un processus pour donner
+    la ressource à un autre = (système coopératif, une application peut
+    monopoliser toutes les ressources et ne rendre la main que
+    lorsqu'elle se termine), le seul moyen qu'un process reprenne le CPU
+    c'est que l'autre se termine donc ils coopèrent
+
+Critère d’ordonnancement :
+
+  * équilibre = un bon ordonnanceur fait en sorte que toutes les parties
+    du système soient occupées = IO + CPU 99%
+  * equité = un bon ordonnanceur alloue la même quantité de CPU à chaque
+    processus
+  * respect de politique = un bon ordonnanceur fait en sorte de faire
+    respecter les règles d'occupation du CPU
+
+
+Algorithme du FCFS = First Come First Serve
+
+  * sans réquisition
+  * facile à implémenter
+  * grande variance du temps d'attente
+  * ne respecte pas l'équilibre, pendant que le cpu bosse, les io ne
+    bossent pas
+  * mauvais pour les systèmes en temps partagés (pk ?)
+
+
+Algorithme du SJF / N = Shortest Job First / Next
+
+  * sans réquisition
+  * selection du prochain processus ayant le temps d'exécution le plus court
+  * version avec réquisition (SRTF = Shortest Remaining Time First)
+    (plus court temps restant en premier)
+  * temps d'attente moyen minimal
+  * AVANTAGES
+      o Temps d'attente moyen des processus minimal
+  * DÉSAVANTAGES
+      o risque de famine, si il y a tous les temps des petits processus
+        qui viennent s'ajouter, les longs processus ne sont jamais exécutés
+      o Il faut connaître le temps total d'exécution d'un processus
+        avant son exécution, Parfois on ne peut que l'estimer par
+        moyenne exponentielle
+
+
+Ordonnancement avec priorités
+
+  * On associe une priorité à chaque processus (priorités internes ou
+    externes)
+  * Généralisation du SJF ( où la priorité = inverse temps requis)
+  * DESAVANTAGES 
+      o famine
+  * Solution => vieillissement
+
+
+
+Algorithme du tourniquet (RR = Round Robin)
+
+ 
+
+  * avec réquisition ( préemptif) necessite une horloge / quantum
+  * si Quantum est trop cout : changement de processus régulier donc
+    perte d'efficacité (overhead), car on fait souvent de la commutation
+    de contexte
+      o Si quantum <= temps de commutation de contexte, on passe son
+        temps à faire de la commutation
+  * si Q >> temps commutation => on revient à une algo de type FCFS
+  * Le système est écroulé
+
+
+------------------------------------------------------------------------
+Synchronisation
+
+Algo du Boulanger
+
+ 1. On déclare que l'on veut prendre un numéro
+ 2. On prend le max
+ 3. On déclare que l'on a finit de prendre son numéro
+ 4. Pour chaque processus
+     1. On vérifie qu'il n'est pas en train de prendre son numéro, sinon
+        on attend
+     2. On vérifie qu'on a un ticket supérieur, sinon on attend
+
+
+-> un algo qui est une solution correcte pour N processus
+-> fonctionne sans aide du matériel (matériel n'implémentant pas
+d'opérations atomiques)
+
+
+------------------------------------------------------------------------
+Mémoire
+
+Apparitions de zones innocupées en mémoire
+Fragmentation interne  = système paginé = un processus = 1 page, 1 page
+= multiple de 2, donc espace perdu à la fin
+Fragmentation externe = système segmenté = espace suffisant pour
+l'allocation d'un nouveau processus, mais non contigu
+
+
+------------------------------------------------------------------------
+Mémoire Virtuelle
+
+Défaut de page = Demande d'accès à une page non chargée en mémoire
+chaine de référence = l'ordre dans lequel on demande l'accès aux pages
+
+  * Optimal = remplacer la page qui mettra le plus de temps à être
+    réutilisée
+  * FIFO = First in first out = On remplace la page la plus vieille
+    (parmi toutes les pages à remplacer, on selectionne celle 
+      o Anomalie de Belady
+  * Seconde chance -> on donne une vie en plus avant de remplacer la
+    page la plus vieille (FIFO + 1 vie)
+      o version clock
+  * NRU = Not Recently Used
+  * LRU  = Least Recently Used
+  * NFU = Not Frequently Used
+  * LFU = Least frequently used
+  * WS = WTF
+
+
+On donne le nombre de page dispos, et la chaine de référence, donner les
+scénario d'occupation des pages 
+
+------------------------------------------------------------------------
+Filesystem
+
+
+FCFS = First come first serve
+
+SCAN
+C SCAN = parcours circulaire
+
