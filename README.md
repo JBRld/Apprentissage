@@ -6,5 +6,4 @@ I hope it will help you to prepare your exams.
 
 more information here: http://mastercorp.epita.eu/partiel-2019-a1-s1.html
 
--- 
 Forest Gump
