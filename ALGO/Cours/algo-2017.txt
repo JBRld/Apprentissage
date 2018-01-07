@@ -1,0 +1,184 @@
+Progression du cours d'ALGO.  S5 2017-2018.
+
+Signification des marques:
+A = Groupe A
+B = Groupe B
+C = Groupe C
+I = Section Internationale
+P = notion discutée dans le poly (algo.pdf)
+
+
+Cours 1.  1h30.   [ABC] 12 oct., [I] 13 oct.
+
+(cours non filmé)
+
+[ABCI ] Infos pratiques:
+[ABCIP]   https://www.lrde.epita.fr/~adl/ens/algo/
+[ABCIP]   adl@lrde.epita.fr  (poser les questions pendant le cours!)
+[ABCI ]   mention de l'atelier à venir et des groupes de TD
+[ABCI ] Présentation du cours: donner des outils pour calculer les complexités
+[ABCI ]   notion de problème et d'algorithme
+[ABCI ]   complexité versus benchmark: deux aspects complémentaires
+[ABCIP] Rappels de maths:
+[ABCIP]   utilisation des logs, calcul de log10(36) à la main.
+[ABCIP]   sommes de suites arithmétiques
+[  CIP]   sommes de suites géométriques
+[ABCIP]   parties entières, en particulier n≤x ⇔ n≤⌊x⌋ et n<x ⇔ n<⌈x⌉
+[ABCI ] Calcul du nombre d'itérations de boucles imbriquées
+[ABCI ]   garder des sommes croissantes et des termes positifs
+[ABCI ]   faire des changements de variable pour avoir un incrément de 1
+
+
+Cours 2.  1h30.   [ABC] 19 oct., [I] 20 oct.
+
+https://www.youtube.com/watch?v=1KCXHrLTdJY
+
+[ABCI ] QCM sur les premières pages du poly et le cours 1.
+[ABCIP] Tri par selection
+[ABCIP]   Nombre de comparaisons
+[ABCIP] Lien en le nombre de comparaisons et la complexité
+[ABCIP] Tri par insertion
+[ABCIP]   Nombre de comparaisons dans le meilleur et pire cas
+[ABCIP]   Nombre de comparaisons moyen.
+
+
+Cours 3.  2h00.   [ABCI] 23 oct.
+
+https://www.youtube.com/watch?v=3z66zHUVqS4
+
+[ABCIP] Notations O,Ω,Θ, intuition et definition formelle
+[ABCIP] Lien entre O,Ω,Θ,o,ω et la limite de g(n)/f(n) qd n→∞
+[ABCIP] Algorithmes Merge et MergeSort
+[ABCIP] Complexité de Merge
+[ABCIP] Définition récursive de la complexité de MergeSort
+[ABCI ] Résolution graphique de T(n)=2T(N/2)+θ(n)
+[ABCI ] Résolution de T(n)=2T(N/2)+θ(n) par substitutions
+[ABCIP] Bestiaire des complexités
+[ABCI ] Annonce pour les TPs de l'après-midi:
+[ABCI ]   Les sujets sont sur https://algo.lrde.epita.fr/
+[ ?CI ]   Il existe deux ints tels que x==-x
+
+
+Cours 4.  2h00.   [ABCI] 24 oct.
+
+(cours non filmé)
+
+[ABCIP] Théorème général
+[ABCIP]   Examples d'applications du théorème général
+[ABCI ]   Cas où le théorème général ne marche pas
+[ABCIP]   Intuitions sur les trois cas du théorème
+[ABCIP] Arbres parfaits
+[ABCIP] Tas
+[ABCIP]   Extraction de la racine ("max") d'un tas
+[ABCIP]   Suppression de la racine et correction du tas (graphiquement)
+[ABCIP]   Heapify, BuildHeap, HeapSort
+[ABCIP]   Complexité de Heapify
+[ABCIP]   Complexité "à la louche" de BuildHeap
+
+
+Cours 5.  2h00.   [ABCI] 25 oct.
+
+https://www.youtube.com/watch?v=mkBzviHcEh4
+
+[ABCIP] Tas (suite)
+[ABCIP]   Complexité précise de BuildHeap
+[ABCIP]   Complexité de HeapSort
+[ABCIP] Borner une somme par des intégrales: somme des carrés et somme de 1/i
+[ABCIP] QuickSort
+[ABCIP]   Partition avec première valeur comme pivot
+[ABCIP]   Complexité de Partition
+[ABCIP]   Complexité de QuickSort dans le meilleur cas  (n/2,n/2)
+[ABCIP]   Complexité de QuickSort dans le pire cas      (1,n-1)
+[ABCIP]   Complexité de QuickSort dans un cas favorable (10%,90%)
+[ABCIP]   Complexité moyenne de QuickSort
+[   IP]   Autre choix du pivot: random ou median-of-3
+
+
+Cours 6.  2h00.   [ABCI] 26 oct.
+
+https://www.youtube.com/watch?v=JCOvafLKr3E
+
+[ABC P]   Autre choix du pivot: random ou median-of-3
+[ABCIP] Optimisations de QuickSort:
+[ABCIP]   Derécursiver un appel de QuickSort
+[ABCIP]   Récursion du plus petit côté
+[ABCIP]   Appel d'InsertionSort() pour les petits tableaux
+[ABCIP]   Complexité spatiale de QuickSort
+[ABCIP] Tri introspectif
+[ABCI ] Pire cas des tris comparatifs
+[ABCI ] Tri en place et tri stable
+
+
+Cours 7.  2h00.   [ABCI] 27 oct.
+
+https://www.youtube.com/watch?v=ZU6-slAKorA
+
+[ABCI ] Allocation dynamique & complexité amortie
+[ABCI ] Counting sort
+[ABCI ] Radix Sort LSD
+[ABCI ] Radix Sort MSD
+[ABCI ]   Binary Quick Sort
+[ABCI ] Bucket Sort
+[ABCI ]   complexité moyenne de Bucket Sort
+
+
+Cours 8.  1h30.   [ABC] 2 nov. [I] 3 nov
+
+https://www.youtube.com/watch?v=0WsWzUCwJyg (mal cadrée)
+
+[ABCI ] QCM #2
+[ABCI ] Review code TP.
+
+
+Cours 9.  1h30.   [ABC] 9 nov. [I] 10 nov
+
+https://www.youtube.com/watch?v=QE2YI_Cxt64
+
+[ABCIP] Preuve de complexité par récurrence
+[ABCIP] QuickSelect
+[     ] Sélection linéaire
+
+Cours 10.  1h30.   [ABC] 16 nov. [I] 17 nov
+
+https://www.youtube.com/watch?v=GMmweb0tVdA (mal cadrée)
+
+[ABCI ] Multiplication de polynômes
+[ABCI ]   algorithme naïf en θ(n²)
+[ABCI ]   lien avec la multiplication des (grands) nombres
+[ABCI ]   algorithme de Karastuba en θ(n^log₂(3))
+[ABCI ]   représentation des polynômes par racines
+[ABCI ]   représentation des polynômes par valeurs
+[ABCI ]   (intuition) FFT en θ(n log n)
+
+Cours 11.  1h30.   [ABC] 23 nov. [I] 29 nov
+
+https://www.youtube.com/watch?v=zDOsUdFdWFM (mal cadrée)
+
+[ABCI ] Distance de Levenstein
+[ABCI ]   Définition recursive
+[ABCI ]   Implémentation naïve
+[ABCI ]   Version avec cache
+          (J'ai oublié de prononcer "mémoization" avec les groupes B & C)
+[ABCI ]   Implémentation itérative]
+[ABCI ] Problème de la chaîne de multiplication de matrices (intro)
+
+
+Cours 12.  1h30.   [ABC] 30 nov. [I] 1 dec
+
+https://www.youtube.com/watch?v=F5ekjlJCbxg
+
+[ABCI ] Problème de la chaîne de multiplication de matrices (intro)
+[ABCIP]   Nombres de Catalan.
+[ABCI ]   Définition récursive du nombre de mult. scalaires minimal
+[ABCI ]   Calcul sur un exemple
+[ABCI ]   Complexité de la solution
+[ABCI ] Sous-structure optimale
+
+
+Cours 13.  1h30.   [ABC] 7 dec. [I] 8 dec
+
+https://www.youtube.com/watch?v=5z2P2Ndj4KU
+
+[ABCI ] Problème de la loutre (poissons et sac à dos)
+[ABCI ] Combinaisons de pieces (coin_combo du TP5 de l'atelier)
+[ABCI ] Résumé du semestre
