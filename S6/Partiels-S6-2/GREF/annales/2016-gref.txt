@@ -1,0 +1,22 @@
+GREF 2016
+=========
+
+Exercices qui sont déjà tombés.
+
+Exercice 1
+----------
+
+Cf. Partiel 2015 Exercice 2
+
+- http://mastercorp.epita.eu/a1/annales/graphes_reseau_flots/2015-GREF_S2_2013.pdf
+
+- Donner le nom du problème.
+- Résoudre
+
+Exercice 2
+----------
+
+Cf. Partiel 2010 Exercice 1
+
+- http://mastercorp.epita.eu/a1/annales/graphes_reseau_flots/partiel.graphes.reseaux.flots.2010-1.jpg
+
